@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;  
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    background-color: #232429;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.music-box {
+  height: 500px;
+  width: 280px;
+  display: flex;
+  padding: 20px 30px;
+  position: absolute;
+  margin: 100px 0;
+  z-index: 10;
+  border-radius: 15px;
+  background: #1d1e22;
+  box-shadow:  10px 10px 20px #131417,
+             -10px -10px 20px #27282d;
+  background-image: linear-gradient(
+              50deg,
+  rgb(29, 30, 34) 20%,
+  rgb(51, 56, 60) 95%
+  );
+}
+
+.img-box {
+    width: 150px;
+    position: absolute;
+    bottom: 280px;
+    left: 65px;
+   
+  }
+
+  .img-box img {
+    width: inherit;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: rotate 3s linear infinite;
+
+    animation-play-state: paused;
+}
+
+.music-box.play .img-box img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.navegation {
+    position: absolute;
+    display: flex;
+    bottom: 55px;
+    right: 55px;
+
+}
+
+.action-btn {
+    border: none;
+    border-radius: 50%;
+    color: #ee5611;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 15px;
+    margin: 0 8px;
+    background-image: linear-gradient(
+    0deg,
+    rgb(29, 30, 34) 30%,
+    rgb(51, 56, 60) 90%);
+    box-shadow: 
+     -1px -1px 2px #2b2b2b93,
+      2px 2px 2px rgba(15, 15, 15, 0.527);
+
+}
+
+.action-btn-big {
+    padding: 14px;
+    color: #ee5611;
+    font-size: 15px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+  /*background-color: rgba(255, 255, 255, 0.5);*/
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+}
+
+.music-info h4 {
+  margin: 30px;
+  text-align: center;
+  color: white;
+}
+
+.progress-box {
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 5px;
+  width: 100%;
+  background: rgb(20, 20, 20);
+  box-shadow: inset inset -1px -1px 2px #ffffff,
+                    inset 1px 1px 2px rgb(255, 255, 255);
+}
+
+.progress {
+  background-color: #ee5611;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+#Footer{
+  position: absolute;
+  left: 35%;
+  right: 35%;
+  justify-content: center;
+  align-items: center;
+  bottom: 2vh;
+  text-align: center;
+}
+#text-footer {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #ee5611;
+
+}
+
+a:hover {
+  color: #fd854d;
+}
